@@ -1,4 +1,5 @@
 # dattayoddhas
 Datayoddhas website for SIH 2025
 
-made using HTML, CSS and Javascript only.
+Frontend made using HTML, CSS and Javascript only.
+Backend made using Python , Flask API .
