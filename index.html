@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Rockfall Prediction Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<div id="popup" class="popup"></div>
+<body>
+
+<header>
+  AI Rockfall Prediction & Alert Dashboard
+</header>
+
+<div class="container">
+  <!-- Cards -->
+  <div class="grid">
+    <div class="card">
+      <h3>Prediction Status</h3>
+      <div id="prediction-status" class="alert">⏳ Loading...</div>
+    </div>
+
+    <div class="card">
+      <h3>Weather Data</h3>
+      <p id="rainfall">Rainfall: -</p>
+      <p id="temperature">Temp: -</p>
+      <p id="slope">Angle: -</p>
+      <p id="vibration">Vibration: -</p>
+      <p id="location">📍 Location: -</p>
+    </div>
+
+    <div class="card">
+      <h3>Last Update</h3>
+      <p id="last-update">-</p>
+    </div>
+  </div>
+
+  <!-- Risk Chart -->
+  <div class="card">
+    <h3>Rockfall Risk Trend</h3>
+    <canvas id="riskChart"></canvas>
+  </div>
+
+  <!-- Alerts Section -->
+  <div class="card" style="margin-top:2rem;">
+    <h3 style="margin-bottom:1rem; color:#2c3e50;">Alerts</h3>
+    <div id="alerts-list"><p>No alerts yet</p></div>
+    <button onclick="triggerManualAlert()" class="btn-alert">
+      Trigger Manual Alert
+    </button>
+  </div>
+</div>
+
+<footer>
+  Mineguard AI | Team Datayoddhas
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
